@@ -41,6 +41,7 @@
         self.itemsViews = [itemsViews mutableCopy];
         self.separators = [NSMutableArray array];
         self.shouldExchangeItems = YES;
+        self.dimColor = [UIColor blackColor];
                         
         [self addDimView];
         [self addContainerView];
@@ -144,7 +145,7 @@
 
     self.dimView = [[UIView alloc] initWithFrame: self.bounds];
     self.dimView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
-    self.dimView.backgroundColor = [UIColor blackColor];
+    self.dimView.backgroundColor = self.dimColor;
     self.dimView.alpha = 0.;
     self.dimView.tag = DIM_VIEW_TAG;
     [self addSubview: self.dimView];
